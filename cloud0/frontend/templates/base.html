@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Aplicacion Fabian Heredia{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>App Eventos</h1>
+      {% if user.is_authenticated %}
+        
+        <p>Esto es lo que llevara mi pagina</p>
+      {% else %}
+        
+        
+      {% endif %}
+      <hr>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
