@@ -8,11 +8,11 @@
     <header>
       <h1>App Eventos</h1>
       {% if user.is_authenticated %}
-        
-        <p>Esto es lo que llevara mi pagina</p>
+      <input type="button" value="Eventos" onclick="window.location.href='{% url 'eventos:listaEventos' %}'" />
+      <a href="{% url 'eventos:logout' %}">Salir</a>
       {% else %}
         
-        
+      <a href="{% url 'eventos:login' %}">Ingresar</a> / <a href="{% url 'eventos:signup' %}">Registro</a>
       {% endif %}
       <hr>
     </header>

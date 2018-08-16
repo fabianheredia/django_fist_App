@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+    <h2>Detalles {{ evento.e_nombre }}</h2>
+    <table>
+
+        <col width="180">
+
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+
+        
+        <tr><td>Nombre</td><td>{{ evento.e_nombre }}</td></tr>
+        <tr><td>Categoria</td><td>{{ evento.get_categoria_display }}</td></tr>
+        <tr><td>Lugar</td><td>{{ evento.e_lugar }}</td></tr>
+        <tr><td>Dirección</td><td>{{ evento.e_direccion }}</td></tr>
+        <tr><td>Fecha Inicio</td><td>{{ evento.e_fechaIni }}</td></tr>
+        <tr><td>Fecha Fin</td><td>{{ evento.e_fechaFin }}</td></tr>
+        <tr><td>Modo</td><td>{{ evento.e_tipo  }}</td></tr>
+       
+       
+    </table>
+
+    <form>
+        <br>
+        <input type="button" value="Regresar" onclick="window.location.href='{% url 'eventos:listaEventos' %}'" />
+    </form>
+{% endblock %}

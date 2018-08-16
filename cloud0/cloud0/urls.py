@@ -21,5 +21,5 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/',include('frontend.urls')),
+    path('app/',include(('frontend.urls','frontend'),namespace ='eventos')),
 ]

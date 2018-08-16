@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Creación | Edición{% endblock %}
+{% block content %}
+
+    <!-- {{ request.path }} -->
+
+    <h2>Creación / Edición de evento</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <form>
+            <br>
+            <input type="submit" value="Guardar" />
+            <input type="button" value="Cancelar" onclick="window.location.href='{% url 'eventos:home' %}'" />
+        </form>
+    </form>
+{% endblock %}
