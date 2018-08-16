@@ -2,7 +2,7 @@
 
 {% block title %}Listado de Eventos{% endblock %}
 {% block content %}
-
+<section class="container">
     <h2>Listado de Eventos</h2>
 
 
@@ -16,14 +16,20 @@
         {% for evento in object_list %}
             <li>
                 <p>
-                    <form>
+                    <form >
+                     
                         {{ evento.e_nombre }} | Fecha de creación: {{ evento.e_fechaIni }}
-                        <input type="button" value="detalle" onclick="window.location.href='{% url 'eventos:detalle' evento.id %}'" />
+                     
+                        <input class="btn btn-info" type="button" value="detalle" onclick="window.location.href='{% url 'eventos:detalle' evento.id %}'" />
+           
                         <input type="button" value="Editar" onclick="window.location.href='{% url 'eventos:editar' evento.id %}'" />
-                        <input type="button" value="Eliminar" onclick="window.location.href='{% url 'eventos:borrar'  evento.id %}'" />
+                
+                       
+                        <input class="btn btn-danger" type="button" value="Eliminar" onclick="window.location.href='{% url 'eventos:borrar'  evento.id %}'" />
                     </form>
                 </p>
             </li>
         {% endfor %}
     </ul>
+</section>
 {% endblock %}

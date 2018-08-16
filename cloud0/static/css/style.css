@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+.consultas {
+    float: left;
+    width: 50%;
+    
+}
+.grafo {
+    float: right;
+    width: 50%; 
+}
+.grafo-arte{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #999
+}
+.info-grafo{
+    width: 80%;
+    background-color: #ece5de;
+    border: 2px solid #888;
+    padding: 30px 50px;
+}
+.info-grafo1{
+    width: 80%;
+    padding: 30px 50px;
+}
+.info-titulo{
+    font-size: 24px;
+    text-align: center;
+    color: #444444;
+}
+.info-url{
+    
+}
+.header {
+    background-color: #fff200;
+    height: 96px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    padding: 10px;
+    position: relative;
+}
+.contenido{
+    margin-top: 20px;
+}
+
+.titulo-taller{
+    background-color: #fafafa;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    text-align: center;
+
+}
+.integrantes{
+    text-align: center;
+    list-style:none;
+}
+.header .titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.header .navegacion {
+    margin-right: 60px;
+    position: absolute;
+    right: 60px;
+    top: 40px;
+}
+.header .navegacion .main_nav li{
+    list-style: none;
+
+}
+
+.header .navegacion .main_nav a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+
